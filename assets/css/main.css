@@ -152,7 +152,7 @@ input, select, textarea {
 	}
 
 	a {
-		color: #d52349;
+		color: #7db11b;
 		text-decoration: underline;
 	}
 
@@ -1566,6 +1566,53 @@ input, select, textarea {
 		margin: 2.25em 0 0 0;
 	}
 
+/* RRSS */
+
+	.social-list a {
+		width: 32px;
+		height: 32px;
+		padding-top: 2px;
+		display: inline-block;
+		text-align: center;
+		border-radius: 50%;
+		transition: all 0.4s ease-in-out;
+		margin-top: 20px;
+		background-color: #fff
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.social-list a {
+			transition: none
+		}
+	}
+
+	.social-list a:hover {
+		color: #564082;
+		background-color: rgba(255, 255, 255, 0.8)
+	}
+	
+	.list-unstyled {
+		padding-left: 0;
+		list-style: none
+	}
+
+	.list-inline {
+		padding-left: 0;
+		list-style: none
+	}
+
+	.list-inline-item {
+		display: inline-block
+	}
+	
+	.list-inline-item:not(:last-child) {
+		margin-right: .5rem
+	}
+
+	.config-panel #color-options li.list-inline-item {
+		margin-right: 5px
+	}
+
 /* Box */
 
 	.box {
@@ -1614,7 +1661,7 @@ input, select, textarea {
 		cursor: pointer;
 		border: 0;
 		border-radius: 5px;
-		background: #d52349;
+		background: #7db11b;
 		color: #fff !important;
 		font-weight: 700;
 		outline: 0;
@@ -1828,7 +1875,7 @@ input, select, textarea {
 			position: absolute;
 			left: 0;
 			top: 1.3em;
-			background-color: #d52349;
+			background-color: #7db11b;
 			height: 3.5em;
 			text-align: center;
 			color: #fff;
@@ -1843,7 +1890,7 @@ input, select, textarea {
 				position: absolute;
 				bottom: 0;
 				right: -1.2em;
-				border-left: solid 1.25em #d52349;
+				border-left: solid 1.25em #7db11b;
 				border-top: solid 1.8em transparent;
 				border-bottom: solid 1.8em transparent;
 			}
@@ -2015,7 +2062,7 @@ input, select, textarea {
 		.icon.featured {
 			position: relative;
 			display: inline-block;
-			background-color: #d52349;
+			background-color: #7db11b;
 			width: 9em;
 			padding: 1.75em 0 0.75em 0;
 			border-top-left-radius: 5px;
@@ -2035,7 +2082,7 @@ input, select, textarea {
 				position: absolute;
 				bottom: -1.95em;
 				left: 0;
-				border-top: solid 2em #d52349;
+				border-top: solid 2em #7db11b;
 				border-left: solid 4.5em transparent;
 				border-right: solid 4.5em transparent;
 			}
@@ -2117,7 +2164,7 @@ input, select, textarea {
 				}
 
 				#nav > ul > li.current > a {
-					background: #d52349;
+					background: #7db11b;
 					color: #fff !important;
 					font-weight: 700;
 				}
@@ -2186,7 +2233,7 @@ input, select, textarea {
 		#banner header {
 			background-color: rgba(34, 30, 31, 0.98);
 			display: inline-block;
-			padding: 2.5em 5em;
+			padding: 2em 5em 0em 5em;
 			border-radius: 5px;
 		}
 
@@ -2198,7 +2245,7 @@ input, select, textarea {
 			}
 
 			#banner header p {
-				color: #d52349;
+				color: #7db11b;
 				padding: 0;
 				font-style: normal;
 				margin: 0;

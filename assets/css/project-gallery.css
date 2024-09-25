@@ -1,9 +1,9 @@
 :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
+    --primary: #7db11b;
+    --primaryLight: #7db11b;
+    --secondary: #7db11b;
+    --secondaryLight: #7db11b;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
@@ -26,7 +26,7 @@ body {
     box-sizing: border-box;
 }
 .cs-topper {
-    font-size: var(--topperFontSize);
+    font-size: 2.5em;
     line-height: 1.2em;
     text-transform: uppercase;
     text-align: inherit;
@@ -35,10 +35,11 @@ body {
     color: var(--primary);
     margin-bottom: 0.25rem;
     display: block;
+    font-style: normal;
 }
 
 .cs-title {
-    font-size: var(--headerFontSize);
+    font-size: 2.5em;
     font-weight: 900;
     line-height: 1.2em;
     text-align: inherit;
@@ -46,6 +47,7 @@ body {
     margin: 0 0 1rem 0;
     color: var(--headerColor);
     position: relative;
+    font-style: normal;
 }
 
 .cs-text {
@@ -56,6 +58,7 @@ body {
     max-width: 40.625rem;
     margin: 0;
     color: var(--bodyTextColor);
+    font-style: normal;
 }
                             
 /*-- -------------------------- -->
@@ -143,7 +146,7 @@ body {
         width: 100%;
         height: 100%;
         padding: 1em;
-        background-color: rgba(229, 87, 44, 0.9);
+        background-color: #618a15;
         opacity: 0;
         position: absolute;
         display: flex;
