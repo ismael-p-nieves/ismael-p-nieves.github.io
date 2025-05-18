@@ -60,7 +60,42 @@ body {
     color: var(--bodyTextColor);
     font-style: normal;
 }
-                            
+          
+/*-- -------------------------- -->
+<---      Featured Games        -->
+<--- -------------------------- -*/
+
+.cs-featured {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.cs-featured-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #FF9900;
+}
+
+.cs-featured-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cs-featured-item {
+    border: 2px solid #FF9900;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.cs-featured-item:hover {
+    transform: scale(1.05);
+}
+
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
