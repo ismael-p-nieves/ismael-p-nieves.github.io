@@ -66,6 +66,10 @@ body {
 <--- -------------------------- -*/
 
 .cs-featured {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
     margin-top: 4rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -82,7 +86,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    justify-items: center; /* centra las cajas en cada celda */
+    justify-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
