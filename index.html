@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/carousel.css" />
 		<!-- <link id="theme-style" rel="stylesheet" href="assets/css/theme-8.css"> -->
 	</head>
 	<body class="homepage is-preload">
@@ -40,9 +41,10 @@
 								<p> Game Designer with a background in Data Analysis. I enrich my designs</p>
 								<p>studying User Behaviour and collaborating with my teammates in the creative process.</p>
 								<ul class="social-list list-inline py-3 mx-auto">
-									<li class="list-inline-item"><a href="https://x.com/ismael_gurr"><i class="fab fa-twitter fa-fw"></i></a></li>
+									<!-- <li class="list-inline-item"><a href="https://x.com/ismael_gurr"><i class="fab fa-twitter fa-fw"></i></a></li> -->
 									<li class="list-inline-item"><a href="https://www.linkedin.com/in/ismael-p-nieves/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
 									<li class="list-inline-item"><a href="https://github.com/ismael-p-nieves"><i class="fab fa-github-alt fa-fw"></i></a></li>
+									<li class="list-inline-item"><a href="mailto:ismaelpereznieves@gmail.com"><i class="fas fa-envelope fa-fw"></i></a></li>
 								</ul>
 							</header>
 						</section>
@@ -82,7 +84,7 @@
 							<footer>
 								<ul class="actions">
 									<li><a href="project-gallery.html" class="button large">Check my Projects</a></li>
-									<li><a href="my-about.html" class="button alt large">Learn More</a></li>
+									<li><a href="my-about.html" class="button alt large">About me</a></li>
 								</ul>
 							</footer>
 						</section>
@@ -92,125 +94,96 @@
 			<!-- Main -->
 				<section id="main">
 					<div class="container">
-						<div class="row">
-							<div class="col-12">
-
-								<!-- Portfolio -->
-									<section>
-										<header class="major">
-											<h2>My Portfolio</h2>
-										</header>
-										<div class="row">
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="hidalgo.html" class="image featured"><img src="images/hidalgo.jpg" alt="" /></a>
-													<header>
-														<h3>Hidalgo</h3>
-													</header>
-													<p>A cozy adventure-narrative game based on the popular novel "Don Quijote de la Mancha".</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="hidalgo.html" class="button alt">Read more</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="https://topocart.itch.io/patapan" class="image featured"><img src="https://i.imgur.com/8JNbl6f.png" alt="" /></a>
-													<header>
-														<h3>Patapan</h3>
-													</header>
-													<p>Cozy RTS prototype where you command a group of Patapans to gather food, create more Patapans and destroy
-													the obstacles in your way with the power of teamwork!</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="https://topocart.itch.io/patapan" class="button alt">Read more</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-											<div class="col-4 col-6-medium col-12-small">
-												<section class="box">
-													<a href="new-home.html" class="image featured"><img src="images/new-home.png" alt="" /></a>
-													<header>
-														<h3>New Home</h3>
-													</header>
-													<p>Action RPG where Earth has been blown up and you have to protect one of the last human shelters in the galaxy.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="new-home.html" class="button alt">Read more</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-										</div>
-									</section>
-
-							</div>
-							<div class="col-12">
-
-							<!-- Articles -->
+						<!-- Port-Folio -->
 							<section>
 								<header class="major">
-									<h2>My Best Articles</h2>
+									<h2>My Projects</h2>
 								</header>
 								<div class="row">
-									<div class="col-4 col-6-medium col-12-small">
-										<section class="box">
-											<a href="https://www.navigames.es/articulos/como-es-trabajar-en-la-industria-del-videojuego-en-espana-entrevistas-indie-dev-day/" class="image featured"><img src="images/indie-dev-day.jpg" alt="" /></a>
-											<header>
-												<h3>Indie Dev Day</h3>
-												<h5>Interview</h5>
-											</header>
-											<p>Series of interviews to spanish developers from small companies, like Mean Mink, to the big ones, like Larian Studios.</p>
-											<footer>
-												<ul class="actions">
-													<li><a href="https://www.navigames.es/articulos/como-es-trabajar-en-la-industria-del-videojuego-en-espana-entrevistas-indie-dev-day/" class="button alt">Read it</a></li>
-												</ul>
-											</footer>
-										</section>
+								<div class="col-12">
+									<section id="project-carousel" class="container">
+									<header class="major">
+										<h2>Highlighted Projects</h2>
+									</header>
+									<div class="carousel-wrapper">
+										<button id="prev-button" class="carousel-button">←</button>
+										<div class="carousel-track-container">
+										<div class="carousel-track">
+											<!-- Tarjeta 1 -->
+											<div class="project-card">
+											<a href="https://topocart.itch.io/patapan">
+												<img src="https://i.imgur.com/8JNbl6f.png" alt="Patapan">
+												<div class="card-info">
+												<h3>Patapan</h3>
+												<p>Cozy RTS prototype where you command a group of Patapans...</p>
+												</div>
+											</a>
+											</div>
+											<!-- Tarjeta 2 -->
+											<div class="project-card">
+											<a href="https://sph-works.itch.io/doom">
+												<img src="https://i.imgur.com/wnZHBqD.jpeg" alt="DOOM">
+												<div class="card-info">
+												<h3>D.O.O.M.</h3>
+												<p>Game Jam platformer shooter with an advancing wall mechanic.</p>
+												</div>
+											</a>
+											</div>
+											<!-- Tarjeta 3 -->
+											<div class="project-card">
+											<a href="https://store.steampowered.com/app/3157950/Hidalgo/">
+												<img src="https://i.imgur.com/AWWv0KL.jpeg" alt="Hidalgo">
+												<div class="card-info">
+												<h3>Hidalgo</h3>
+												<p>Narrative-adventure cozy game based on "Don Quixote".</p>
+												</div>
+											</a>
+											</div>
+											<!-- Tarjeta 3 -->
+											<div class="project-card">
+											<a href="https://store.steampowered.com/app/3157950/Hidalgo/">
+												<img src="https://i.imgur.com/AWWv0KL.jpeg" alt="Hidalgo">
+												<div class="card-info">
+												<h3>Hidalgo</h3>
+												<p>Narrative-adventure cozy game based on "Don Quixote".</p>
+												</div>
+											</a>
+											</div>
+											<!-- Tarjeta 3 -->
+											<div class="project-card">
+											<a href="https://store.steampowered.com/app/3157950/Hidalgo/">
+												<img src="https://i.imgur.com/AWWv0KL.jpeg" alt="Hidalgo">
+												<div class="card-info">
+												<h3>Hidalgo</h3>
+												<p>Narrative-adventure cozy game based on "Don Quixote".</p>
+												</div>
+											</a>
+											</div>
+											<!-- Tarjeta 3 -->
+											<div class="project-card">
+											<a href="https://store.steampowered.com/app/3157950/Hidalgo/">
+												<img src="https://i.imgur.com/AWWv0KL.jpeg" alt="Hidalgo">
+												<div class="card-info">
+												<h3>Hidalgo</h3>
+												<p>Narrative-adventure cozy game based on "Don Quixote".</p>
+												</div>
+											</a>
+											</div>
+										</div>
+										</div>
+										<button id="next-button" class="carousel-button">→</button>
 									</div>
-									<div class="col-4 col-6-medium col-12-small">
-										<section class="box">
-											<a href="https://www.navigames.es/analisis/shin-megami-tensei-v-vengeance-pc/" class="image featured"><img src="https://i.imgur.com/1DMIme5.jpg" alt="" /></a>
-											<header>
-												<h3>Shin Megami Tensei V: Vengeance</h3>
-												<h5>Review</h5>
-											</header>
-											<p>Turn-based JRPG where the world is going to end and you, the fusion between a human and a God, have to decide its fate.</p>
-											<footer>
-												<ul class="actions">
-													<li><a href="#" class="button alt">Find out more</a></li>
-												</ul>
-											</footer>
-										</section>
-									</div>
-									<div class="col-4 col-6-medium col-12-small">
-										<section class="box">
-											<a href="https://www.navigames.es/entrevistas/entrevista-guadalindie-anisa-sanusi/" class="image featured"><img src="https://i.imgur.com/tIayNBP.jpg" alt="" /></a>
-											<header>
-												<h3>Anisa Sanusi</h3>
-												<h5>Interview</h5>
-											</header>
-											<p>Interview with Anisa Sanusi, an UI/UX freelance designer, about her work and the shutdown of Roll7, where she collaborated to create Rollerdrome.</p>
-											<footer>
-												<ul class="actions">
-													<li><a href="https://www.navigames.es/entrevistas/entrevista-guadalindie-anisa-sanusi/" class="button alt">Read it</a></li>
-												</ul>
-											</footer>
-										</section>
-									</div>
+									<div id="carousel-dots" class="carousel-dots"></div>
+									</section>
 								</div>
+								</div>
+
 							</section>
-						</div>
-					</div>
-					<div class="col-12">
 
 								<!-- Blog -->
 									<section>
 										<header class="major">
-											<h2>The Blog</h2>
+											<h2>My Design Process</h2>
 										</header>
 										<div class="row">
 											<div class="col-6 col-12-small">
@@ -244,7 +217,61 @@
 										</div>
 									</section>
 
-							</div>
+							<!-- Articles -->
+							<section>
+								<header class="major">
+									<h2>My Articles</h2>
+								</header>
+								<div class="row">
+									<div class="col-4 col-6-medium col-12-small">
+										<section class="box">
+											<a href="https://www.navigames.es/articulos/como-es-trabajar-en-la-industria-del-videojuego-en-espana-entrevistas-indie-dev-day/" class="image featured"><img src="images/indie-dev-day.jpg" alt="" /></a>
+											<header>
+												<h3>Indie Dev Day</h3>
+												<h5>Interview</h5>
+											</header>
+											<p>Series of interviews to spanish developers from small companies, like Mean Mink, to the big ones, like Larian Studios.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="https://www.navigames.es/articulos/como-es-trabajar-en-la-industria-del-videojuego-en-espana-entrevistas-indie-dev-day/" class="button alt">Read it</a></li>
+												</ul>
+											</footer>
+										</section>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<section class="box">
+											<a href="https://www.navigames.es/analisis/shin-megami-tensei-v-vengeance-pc/" class="image featured"><img src="https://i.imgur.com/1DMIme5.jpg" alt="" /></a>
+											<header>
+												<h3>Shin Megami Tensei V: Vengeance</h3>
+												<h5>Review</h5>
+											</header>
+											<p>Turn-based JRPG where the world is going to end and you, the fusion between a human and a God, have to decide its fate.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="https://www.navigames.es/analisis/shin-megami-tensei-v-vengeance-pc" class="button alt">Read it</a></li>
+												</ul>
+											</footer>
+										</section>
+									</div>
+									<div class="col-4 col-6-medium col-12-small">
+										<section class="box">
+											<a href="https://www.navigames.es/entrevistas/entrevista-guadalindie-anisa-sanusi/" class="image featured"><img src="https://i.imgur.com/tIayNBP.jpg" alt="" /></a>
+											<header>
+												<h3>Anisa Sanusi</h3>
+												<h5>Interview</h5>
+											</header>
+											<p>Interview with Anisa Sanusi, an UI/UX freelance designer, about her work and the shutdown of Roll7, where she worked on Rollerdrome.</p>
+											<footer>
+												<ul class="actions">
+													<li><a href="https://www.navigames.es/entrevistas/entrevista-guadalindie-anisa-sanusi/" class="button alt">Read it</a></li>
+												</ul>
+											</footer>
+										</section>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
 						</div>
 					</div>
 				</section>
@@ -292,5 +319,79 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				const track = document.querySelector('.carousel-track');
+				const cards = document.querySelectorAll('.project-card');
+				const prevButton = document.getElementById('prev-button');
+				const nextButton = document.getElementById('next-button');
+				const dotsContainer = document.getElementById('carousel-dots');
+
+				let currentIndex = 0;
+				let cardsPerView = getCardsPerView();
+				let totalSlides = Math.ceil(cards.length / cardsPerView);
+
+				function getCardsPerView() {
+					const width = window.innerWidth;
+					if (width < 600) return 1;
+					if (width < 900) return 2;
+					return 3;
+				}
+
+				function createDots() {
+					dotsContainer.innerHTML = '';
+					totalSlides = Math.ceil(cards.length / getCardsPerView());
+					for (let i = 0; i < totalSlides; i++) {
+						const dot = document.createElement('button');
+						if (i === currentIndex) dot.classList.add('active');
+						dot.addEventListener('click', () => goToSlide(i));
+						dotsContainer.appendChild(dot);
+					}
+				}
+
+				function goToSlide(index) {
+					currentIndex = index;
+					const offset = (100 / cardsPerView) * currentIndex;
+					track.style.transform = `translateX(-${offset}%)`;
+					updateDots();
+				}
+
+				function updateDots() {
+					const dots = dotsContainer.querySelectorAll('button');
+					dots.forEach(dot => dot.classList.remove('active'));
+					if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+				}
+
+				nextButton.addEventListener('click', () => {
+					currentIndex = (currentIndex + 1) % totalSlides;
+					goToSlide(currentIndex);
+				});
+
+				prevButton.addEventListener('click', () => {
+					currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+					goToSlide(currentIndex);
+				});
+
+				function handleResize() {
+					cardsPerView = getCardsPerView();
+					goToSlide(0); // reinicia al primer slide cuando cambia el tamaño
+				}
+
+				window.addEventListener('resize', handleResize);
+					document.addEventListener('DOMContentLoaded', () => {
+					cardsPerView = getCardsPerView();
+					createDots();
+					goToSlide(0);
+				});
+
+				window.addEventListener('resize', handleResize);
+					document.addEventListener('DOMContentLoaded', () => {
+					cardsPerView = getCardsPerView();
+					createDots();
+					goToSlide(0);
+				});
+
+				createDots();
+				goToSlide(0);
+			</script>
 	</body>
 </html>
