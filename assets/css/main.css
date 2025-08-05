@@ -1619,6 +1619,9 @@ input, select, textarea {
 		background: #ffffff;
 		border-bottom: solid 1px #ccc;
 		padding: 2.75em 1.75em 2.75em 1.75em;
+		display: flex;
+		flex-direction: column;
+		height: 100%; /* asegura que ocupe el alto máximo posible */
 	}
 
 		.box .image.featured {
@@ -1644,8 +1647,16 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
+		.box footer {
+			margin-top: auto; /* empuja el footer al fondo */
+			display: flex;
+			align-items: flex-end; /* Alinea el botón abajo */
+		}
+
 		.box footer ul.actions {
-			margin-bottom: 0;
+			width: 100%;
+			display: flex;
+			justify-content: flex-start; /* o center o flex-end si lo prefieres alineado */
 		}
 
 /* Button */

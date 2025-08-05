@@ -31,6 +31,7 @@
 								<li><a href="project-gallery.html">My projects</a></li>
 								<li><a href="my-blog-list.html">Blog</a></li>
 								<li><a href="my-about.html">About me</a></li>
+								<li><a href="/assets/files/CV - Ismael Pérez Nieves.pdf">My Curriculum</a></li>
 							</ul>
 						</nav>
 
@@ -45,6 +46,7 @@
 									<li class="list-inline-item"><a href="https://www.linkedin.com/in/ismael-p-nieves/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
 									<li class="list-inline-item"><a href="https://github.com/ismael-p-nieves"><i class="fab fa-github-alt fa-fw"></i></a></li>
 									<li class="list-inline-item"><a href="mailto:ismaelpereznieves@gmail.com"><i class="fas fa-envelope fa-fw"></i></a></li>
+									<li class="list-inline-item"><a href="/assets/files/CV - Ismael Pérez Nieves.pdf"><i class="fas fa-file fa-fw"></i></a></li>
 								</ul>
 							</header>
 						</section>
@@ -108,31 +110,31 @@
 										<div class="carousel-track">
 											<!-- Tarjeta 1 -->
 											<div class="project-card">
-											<a href="https://topocart.itch.io/patapan">
-												<img src="https://i.imgur.com/8JNbl6f.png" alt="Patapan">
+											<a href="https://store.steampowered.com/app/3157950/Hidalgo/">
+												<img src="https://i.imgur.com/AWWv0KL.jpeg" alt="Hidalgo">
 												<div class="card-info">
-												<h3>Patapan</h3>
-												<p>Cozy RTS prototype where you command a group of Patapans...</p>
+												<h3>Hidalgo</h3>
+												<p>Narrative-adventure cozy game based on "Don Quixote".</p>
 												</div>
 											</a>
 											</div>
 											<!-- Tarjeta 2 -->
+											<div class="project-card">
+												<a href="https://topocart.itch.io/patapan">
+													<img src="https://i.imgur.com/8JNbl6f.png" alt="Patapan">
+													<div class="card-info">
+														<h3>Patapan</h3>
+														<p>Cozy RTS prototype where you command a group of Patapans...</p>
+													</div>
+												</a>
+											</div>
+											<!-- Tarjeta 3 -->
 											<div class="project-card">
 											<a href="https://sph-works.itch.io/doom">
 												<img src="https://i.imgur.com/wnZHBqD.jpeg" alt="DOOM">
 												<div class="card-info">
 												<h3>D.O.O.M.</h3>
 												<p>Game Jam platformer shooter with an advancing wall mechanic.</p>
-												</div>
-											</a>
-											</div>
-											<!-- Tarjeta 3 -->
-											<div class="project-card">
-											<a href="https://store.steampowered.com/app/3157950/Hidalgo/">
-												<img src="https://i.imgur.com/AWWv0KL.jpeg" alt="Hidalgo">
-												<div class="card-info">
-												<h3>Hidalgo</h3>
-												<p>Narrative-adventure cozy game based on "Don Quixote".</p>
 												</div>
 											</a>
 											</div>
@@ -146,9 +148,8 @@
 												</div>
 											</a>
 										</div>
-										</div>
-										<button id="next-button" class="carousel-button">→</button>
 									</div>
+									<button id="next-button" class="carousel-button">→</button>
 									<div id="carousel-dots" class="carousel-dots"></div>
 									</section>
 								</div>
@@ -296,78 +297,123 @@
 			<script src="assets/js/main.js"></script>
 
 			<script>
-				const track = document.querySelector('.carousel-track');
-				const cards = document.querySelectorAll('.project-card');
-				const prevButton = document.getElementById('prev-button');
-				const nextButton = document.getElementById('next-button');
-				const dotsContainer = document.getElementById('carousel-dots');
+			const track = document.querySelector('.carousel-track');
+			const cards = document.querySelectorAll('.project-card');
+			const prevButton = document.getElementById('prev-button');
+			const nextButton = document.getElementById('next-button');
+			const dotsContainer = document.getElementById('carousel-dots');
 
-				let currentIndex = 0;
-				let cardsPerView = getCardsPerView();
-				let totalSlides = Math.ceil(cards.length / cardsPerView);
+			let currentIndex = 0;
+			let cardsPerView = getCardsPerView();
+			let maxIndex = cards.length - cardsPerView;
 
-				function getCardsPerView() {
-					const width = window.innerWidth;
-					if (width < 600) return 1;
-					if (width < 900) return 2;
-					return 3;
-				}
+			function getCardsPerView() {
+				const width = window.innerWidth;
+				if (width < 600) return 1;
+				if (width < 900) return 2;
+				return 3;
+			}
 
-				function createDots() {
-					dotsContainer.innerHTML = '';
-					totalSlides = Math.ceil(cards.length / getCardsPerView());
-					for (let i = 0; i < totalSlides; i++) {
-						const dot = document.createElement('button');
-						if (i === currentIndex) dot.classList.add('active');
-						dot.addEventListener('click', () => goToSlide(i));
-						dotsContainer.appendChild(dot);
-					}
-				}
+			function goToSlide(index) {
+				const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(cards[0]).marginRight) * 2;
+				track.style.transform = `translateX(-${index * cardWidth}px)`;
+				updateDots(index);
+			}
 
-				function goToSlide(index) {
-					currentIndex = index;
-					const offset = (100 / cardsPerView) * currentIndex;
-					track.style.transform = `translateX(-${offset}%)`;
-					updateDots();
-				}
+			function updateDots(index) {
+				const dots = dotsContainer.querySelectorAll('button');
+				dots.forEach(dot => dot.classList.remove('active'));
+				if (dots[index]) dots[index].classList.add('active');
+			}
 
-				function updateDots() {
-					const dots = dotsContainer.querySelectorAll('button');
-					dots.forEach(dot => dot.classList.remove('active'));
-					if (dots[currentIndex]) dots[currentIndex].classList.add('active');
-				}
-
-				nextButton.addEventListener('click', () => {
-					currentIndex = (currentIndex + 1) % totalSlides;
+			function createDots() {
+				dotsContainer.innerHTML = '';
+				const visibleSteps = cards.length - cardsPerView + 1;
+				for (let i = 0; i < visibleSteps; i++) {
+				const dot = document.createElement('button');
+				if (i === currentIndex) dot.classList.add('active');
+				dot.addEventListener('click', () => {
+					currentIndex = i;
 					goToSlide(currentIndex);
 				});
-
-				prevButton.addEventListener('click', () => {
-					currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-					goToSlide(currentIndex);
-				});
-
-				function handleResize() {
-					cardsPerView = getCardsPerView();
-					goToSlide(0); // reinicia al primer slide cuando cambia el tamaño
+				dotsContainer.appendChild(dot);
 				}
+			}
 
-				window.addEventListener('resize', handleResize);
-					document.addEventListener('DOMContentLoaded', () => {
-					cardsPerView = getCardsPerView();
-					createDots();
-					goToSlide(0);
-				});
+			function setUniformHeights(selector) {
+			const elements = document.querySelectorAll(selector);
+			if (elements.length === 0) return;
 
-				window.addEventListener('resize', handleResize);
-					document.addEventListener('DOMContentLoaded', () => {
-					cardsPerView = getCardsPerView();
-					createDots();
-					goToSlide(0);
-				});
+			let maxHeight = 0;
 
+			// Resetea altura y calcula la máxima
+			elements.forEach(el => {
+				el.style.height = 'auto';
+				const height = el.offsetHeight;
+				if (height > maxHeight) maxHeight = height;
+			});
+
+			// Aplica la altura máxima a todas
+			elements.forEach(el => {
+				el.style.height = `${maxHeight}px`;
+			});
+			}
+
+
+			window.addEventListener('resize', () => {
+			handleResize();
+			setUniformHeights('.project-card');
+			setUniformHeights('.box');
+			});
+
+			nextButton.addEventListener('click', () => {
+			if (currentIndex < maxIndex) {
+				currentIndex++;
+			} else {
+				currentIndex = 0; // volver al principio
+			}
+			goToSlide(currentIndex);
+			});
+
+			prevButton.addEventListener('click', () => {
+			if (currentIndex > 0) {
+				currentIndex--;
+			} else {
+				currentIndex = maxIndex; // ir al final
+			}
+			goToSlide(currentIndex);
+			});
+
+			function handleResize() {
+				cardsPerView = getCardsPerView();
+				maxIndex = cards.length - cardsPerView;
+				currentIndex = Math.min(currentIndex, maxIndex);
 				createDots();
-				goToSlide(0);
+				goToSlide(currentIndex);
+			}
+
+			window.addEventListener('resize', handleResize);
+			document.addEventListener('DOMContentLoaded', () => {
+				cardsPerView = getCardsPerView();
+				maxIndex = cards.length - cardsPerView;
+				createDots();
+				goToSlide(currentIndex);
+
+				setUniformHeights('.project-card');
+				setUniformHeights('.box');
+			});
+
+			window.addEventListener('resize', () => {
+			handleResize();
+			setUniformHeights('.project-card');
+			setUniformHeights('.box');
+			});
+
+			window.addEventListener('load', () => {
+			// Por si hay imágenes que tardan
+			setUniformHeights('.box');
+			});
 			</script>
+
 	</body>
 </html>
